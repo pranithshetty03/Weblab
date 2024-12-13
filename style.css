@@ -1,0 +1,321 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+    text-decoration: underline;
+}
+
+/* Layout with CSS Grid */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Increased gap */
+    padding: 40px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+    flex-grow: 1; /* Allow main to grow and take available space */
+    height: calc(100vh - 160px); /* Adjust for header height */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+section {
+    background-color: #fff;
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Increased max-width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 1.6;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Resume Sections Layout (Grid) */
+.resume-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.resume-sections h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Skill Bars */
+.chart {
+    margin-top: 20px;
+}
+
+.bar {
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding-left: 10px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* CSS Grid for Tabs */
+.tabs {
+    margin: 20px;
+}
+
+.tab-titles {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab-titles li {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-titles li.active {
+    border-bottom: 2px solid #333;
+    color: #333;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Accordion Styles */
+.accordion-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+}
+
+.accordion-content {
+    padding: 10px;
+    background-color: #f4f4f4;
+    display: none;
+}
+
+.accordion-btn:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .resume-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark-mode nav ul li a {
+    color: #ddd;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* Hover Effects for Buttons, Links, and Cards */
+button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e3006d;
+    transform: scale(1.1);
+}
+
+/* Link Hover */
+nav ul li a:hover,
+section ul li a:hover {
+    color: #ff4081;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Card Hover (e.g., for Resume sections) */
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade In Effect for Sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom Font and Icons */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: #ff4081;
+    transition: color 0.3s ease;
+}
+
+a:hover i {
+    color: #e3006d;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #e3006d;
+}

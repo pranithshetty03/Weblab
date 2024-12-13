@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Optional for jQuery -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>My Resume</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio-Data</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tabs">
+        <ul class="tab-titles">
+            <li class="active" data-tab="education">Education</li>
+            <li data-tab="experience">Work Experience</li>
+            <li data-tab="skills">Skills</li>
+            <li data-tab="projects">Projects</li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="education" class="tab-pane active">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>BS in Computer Science</strong> - XYZ University (2010-2014)</li>
+                    <li><strong>MS in Software Engineering</strong> - ABC University (2015-2017)</li>
+                </ul>
+            </div>
+            <div id="experience" class="tab-pane">
+                <h2>Work Experience</h2>
+                <div class="accordion">
+                    <button class="accordion-btn">Software Developer - TechCorp (2018-Present)</button>
+                    <div class="accordion-content">
+                        <p>Developed enterprise-level applications using Java, React, and AWS. Lead a team of developers...</p>
+                    </div>
+
+                    <button class="accordion-btn">Junior Developer - WebTech Ltd. (2015-2018)</button>
+                    <div class="accordion-content">
+                        <p>Contributed to web development projects, focusing on front-end technologies such as HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="skills" class="tab-pane">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, Java</li>
+                    <li>React, Node.js</li>
+                    <li>SQL, MongoDB</li>
+                </ul>
+
+                <!-- Add an interactive chart for skills (using a simple bar graph) -->
+                <h3>Skill Level</h3>
+                <div class="chart">
+                    <div class="bar" style="width: 90%;">HTML/CSS - 90%</div>
+                    <div class="bar" style="width: 80%;">JavaScript - 80%</div>
+                    <div class="bar" style="width: 70%;">React - 70%</div>
+                    <div class="bar" style="width: 60%;">Python - 60%</div>
+                </div>
+            </div>
+            <div id="projects" class="tab-pane">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="https://github.com/johndoe/project1" target="_blank">Project 1: Portfolio Website</a></li>
+                    <li><a href="https://github.com/johndoe/project2" target="_blank">Project 2: E-Commerce Web App</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 John Doe</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
